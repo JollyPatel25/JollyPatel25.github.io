@@ -4,20 +4,23 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/* Navigation bar */}
+      <div>
+        <navbar>
+          <div class ="nav-cover" style={{backgroundColor:'green'}}>
+            <ul class="nav nav-head">
+              <li class="nav-item">Jolly Patel</li>
+            </ul>
+            <ul class="nav nav-side">
+              <li class="nav-item">Work</li>
+              <li class="nav-item">Skills</li>
+              <li class="nav-item">Education</li>
+              <li class="nav-item">About</li>
+            </ul>
+          </div>
+        </navbar>
+      </div>
+      {/* Navigation bar ends */}
     </div>
   );
 }

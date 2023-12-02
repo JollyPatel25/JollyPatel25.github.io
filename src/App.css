@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.nav{
+  list-style: none;
+  display: flex;
+}
+.nav-item{
+  margin: 1%;
+}
+.nav-head{
+  background-color: yellowgreen;
+}
+.nav-side{
+  background-color: lightblue;
+  /* float: right; */
+}
+.nav-cover{
+  margin: 1%;
+  background-color: #282c34;
+}
