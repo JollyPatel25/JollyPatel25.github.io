@@ -39,16 +39,23 @@
 
 .nav{
   list-style: none;
-  display: flex;
 }
 .nav-item{
   margin: 1%;
+  display:inline;
 }
 .nav-head{
-  background-color: yellowgreen;
+  float: inline-start;
+  background-color: burlywood;
+  transition: width 3s , height 1s;
+}
+.nav-head:hover{
+  width: 20%;
+  height: 20%;
 }
 .nav-side{
-  background-color: lightblue;
+  background-color: #96B6C5;
+  float: inline-end;
 }
 .nav-cover{
   margin: 1%;
