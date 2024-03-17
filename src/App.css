@@ -28,36 +28,40 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ /* App.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+} 
+
+.app {
+  height: 100%;
 }
 
-.nav{
-  list-style: none;
+.loading {
+  background-color: #333; 
 }
-.nav-item{
-  margin: 1%;
-  display:inline;
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-.nav-head{
-  float: inline-start;
-  background-color: burlywood;
-  transition: width 3s , height 1s;
+
+.full-screen-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('port1.jpg');
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
+  opacity: 0; 
+  transition: opacity 1s ease; 
 }
-.nav-head:hover{
-  width: 20%;
-  height: 20%;
-}
-.nav-side{
-  background-color: #96B6C5;
-  float: inline-end;
-}
-.nav-cover{
-  margin: 1%;
-  background-color: #282c34;
+
+.loading .full-screen-image {
+  opacity: 1;
+ 
 }

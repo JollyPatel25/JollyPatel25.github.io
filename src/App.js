@@ -1,34 +1,48 @@
+// App.js
 import './App.css';
-// import './tailwind.css'; // Import Tailwind CSS globally
-import MarkdownComponent from './demo.js';
-import TailStylingComponent from './demo2.js';
+import React, { useState, useEffect } from 'react';
+import NavigationBar from './Components/NavigationBar.js';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const imageElement = document.querySelector('.full-screen-image');
+    if (imageElement) {
+      if (isLoading) {
+        imageElement.classList.remove('show');
+      } else {
+        imageElement.addEventListener('transitionend', handleTransitionEnd);
+      }
+    }
+  }, [isLoading]);
+
+  const handleTransitionEnd = () => {
+    const imageElement = document.querySelector('.full-screen-image');
+    if (imageElement) {
+      imageElement.remove();
+    }
+  };
 
   return (
-    <div className="App">
-      {/* Navigation bar */}
-      {/* <navbar>
-        <div class="nav-cover" style={{ backgroundColor: "pink" }}>
-          <ul class="nav">
-            <li class="nav-item nav-head text-hov">Jolly Patel</li>
-            <li class="nav-item nav-side text-hov">Work</li>
-            <li class="nav-item nav-side text-hov">Skills</li>
-            <li class="nav-item nav-side text-hov">Education</li>
-            <li class="nav-item nav-side text-hov">About</li>
-          </ul>
-        </div>
-      </navbar> */}
-      {/* Navigation bar ends */}
-
-   
-      <h1>My React App</h1>
-      <MarkdownComponent />
-      <TailStylingComponent/>
+    <div className="app">
+      <div className={`loading-screen ${isLoading ? 'loading' : ''}`}>
+        <div className={`full-screen-image ${!isLoading ? 'show' : ''}`}></div>
+      </div>
+      <div className={`home-screen ${!isLoading ? 'show' : ''}`}>
+        <NavigationBar />
+      </div>
     </div>
   );
 }
 
 export default App;
-// className="text-4xl font-bold mb-4"
-//  className="container mx-auto px-4 py-8"
