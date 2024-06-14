@@ -1,85 +1,126 @@
 .NavigationBar {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #DED0B6;
+    width: 100%;
     display: flex;
+    justify-content: space-between; /* Distribute space between elements */
     align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    height: 50px;
+    padding: 0px; /* Optional padding */
+    box-sizing: border-box; /* Ensure padding is included in total width and height */
+    z-index: 1000; /* Ensure the nav bar stays on top of other content */
     border-bottom: 1px solid black;
 }
-.my-name-head,
-.navbar {
-    font-size: 18px;
-    float:right;
+
+.NavigationBar ul {
+    padding: 0;
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if necessary */
 }
 
-.my-name-head li,
-.navbar li {
-    border: 1px solid white;
-    padding:5px;
-    display: inline; 
-    margin-right: 20px;
+.my-name-head {
+    flex-grow: 1; /* Take up remaining space */
 }
 .my-name-head li{
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 20px;
+    margin-left:10px;
+    padding:10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.NavigationBar ul li {
+    margin-right: 5px;
+    border: 1px solid #DED0B6;
+    border-left:0.10px solid #FDF7E4;
+    border-right:0.10px solid #FDF7E4;
+    list-style-type: none;
+    border-radius:5px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .my-name-head li{
+        margin-left:0px;
+    }
+    .NavigationBar{
+        display: inline;
+    }
+    .NavigationBar ul{
+        display: inline;
+        margin:0px;
+    }
+    .NavigationBar ul li{
+        border-top:0.10px solid #FDF7E4;
+        border-bottom:0.10px solid #FDF7E4;
+        font-size:10px;
+        padding:2px;
+    }
 }
 
 .my-name-head li:hover,
 .navbar li:hover{
-    background-color: #DDDDDD;
+    background-color: #FDF7E4;
     border: 1px solid #222831;
     border-radius: 5px;
 }
 
 .home-two {
-    margin: 0px;
-    padding:0px;
-    width: 100%;
-    height: 400px;
+    margin-top: 100px; /* Adjust this value based on the height of your NavigationBar */
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-two-canvas {
-    width: calc(100vw - 2%); 
-    height: 100%;
-    max-height: 400px;
-    border-radius: 20px;
-    background-color: rgb(214, 214, 214);
-
-    display: flex; /* Add flex display */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-
+    width: 100%; /* Adjust width as needed */
+    max-width: 600px; /* Example maximum width */
+    height: auto; /* Adjust height as needed */
+    padding: 20px; /* Example padding */
+    border-radius:4%;
+    background-color: #e0e0e0; /* Example background color */
+    text-align: center; /* Center content */
 }
-.data{
+
+.inner-home-two-canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    height: 200px; /* Adjust height as needed */
+    width: 200px; /* Adjust width as needed */
+    background-image: url("../Jolly_pic.jpeg");
+    background-size: cover; /* Ensure the image covers the container */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Example margin */
+}
+
+.data {
     text-align: justify;
     padding: 10px;
-    margin:2px;
-    font-size: 20px;
     background-color: #bebdbd;
     border-radius: 15px;
 }
-.profile-pic{
-    height:317px;
-    width: 300px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("../Jolly_pic.jpeg");
-    border-radius: 50%;
-    background-color: green;
-    border: 1px solid black;
-}
-.home-two-canvas table{
-    align-items: center;
-}
-.inner-home-two-canvas{
-    margin:75px;
+
+
+.my-name-head li:hover,
+.navbar li:hover {
+    background-color: #FDF7E4;
+    border: 1px solid #222831;
+    border-radius: 5px;
 }
