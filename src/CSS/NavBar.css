@@ -12,7 +12,7 @@
     padding: 0px; /* Optional padding */
     box-sizing: border-box; /* Ensure padding is included in total width and height */
     z-index: 1000; /* Ensure the nav bar stays on top of other content */
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #74512D;
 }
 
 .NavigationBar ul {
@@ -62,7 +62,8 @@
         margin:0px;
     }
     .NavigationBar ul li{
-        border-top:0.10px solid #FDF7E4;
+        /* border-top:0.10px solid #FDF7E4; */
+        border: none;
         border-bottom:0.10px solid #FDF7E4;
         font-size:10px;
         padding:2px;
@@ -72,29 +73,48 @@
 .my-name-head li:hover,
 .navbar li:hover{
     background-color: #FDF7E4;
-    border: 1px solid #222831;
+    border: 1px solid #74512D;
     border-radius: 5px;
 }
 
 .home-two {
-    margin-top: 100px; /* Adjust this value based on the height of your NavigationBar */
+    margin-top: 110px; /* Adjust this value based on the height of your NavigationBar */
     display: flex;
+
     justify-content: center;
     align-items: center;
 }
 
 .home-two-canvas {
-    width: 100%; /* Adjust width as needed */
-    max-width: 600px; /* Example maximum width */
+    border-top: 1px solid #E97777;
+    border-right: 1px solid #F7418F;
+    border-bottom: 1px solid #E97777;
+    border-left: 1px solid #F7418F;
+    width: 85%; /* Adjust width as needed */
     height: auto; /* Adjust height as needed */
     padding: 20px; /* Example padding */
-    border-radius:4%;
-    background-color: #e0e0e0; /* Example background color */
+    border-radius:15px;
+    background-color: #F7DED0; /* Example background color */
     text-align: center; /* Center content */
 }
-
+.data {
+    text-align: justify;
+    padding: 10px;
+    border: 1px solid #E97777;
+    background-color: #FEECE2;
+    border-radius: 15px;
+    
+}
+.background-canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 .inner-home-two-canvas {
+    position: relative;
     display: flex;
+    z-index: 2;
     flex-direction: column;
     align-items: center;
 }
@@ -107,20 +127,17 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
+    border: 1.25px solid #E97777;
     margin-bottom: 20px; /* Example margin */
 }
-
-.data {
-    text-align: justify;
-    padding: 10px;
-    background-color: #bebdbd;
-    border-radius: 15px;
-}
-
 
 .my-name-head li:hover,
 .navbar li:hover {
     background-color: #FDF7E4;
-    border: 1px solid #222831;
+    border: 1px solid #74512D;
     border-radius: 5px;
+}
+a{
+    text-decoration: none;
+    color:black;
 }
