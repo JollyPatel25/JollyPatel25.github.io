@@ -30,7 +30,7 @@ function App() {
       "LinkedIn" : "https://www.linkedin.com/in/jollypatel25",
       "LeetCode" : "https://leetcode.com/u/Jolly_Patel/"
     })
-    setPersonName("Jolly Patel");
+    setPersonName("Jolly Patel1");
     setPersonRoles(["Web Developer", "Android Developer", "Coding Enthusiast"])
     setLanguages(["JAVA","Python","PHP","C++"]);
     setDatabases(["My SQL", "MongoDB"]);
