@@ -1,0 +1,69 @@
+.app {
+  text-align: center;
+  display:flex;
+  flex-direction: row;
+  height:100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.main-content{
+  flex:1;
+}
+@media(max-width: 768px)
+{
+  .app{
+    flex-direction: column;
+  }
+}
+.profile-name-image-container{
+  display:flex;
+  /* background-color: #E1F0DA; */
+}
+.link-name {
+  display:flex;
+  flex-direction: column;
+  flex-grow:1;
+}
+@media(max-width: 540px)
+{
+  .profile-name-image-container{
+    flex-direction: column;
+  }
+}
+.decor-horizontal-line{
+  margin:0px 200px;
+  width:200px;
+  height:2px;
+  background-color: beige;
+}
+.skills{
+  display:flex;
+  flex-direction:row;
+  flex-grow:1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
